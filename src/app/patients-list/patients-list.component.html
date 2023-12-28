@@ -1,0 +1,43 @@
+
+<div class="container-fluid text-center">
+<h2>Patient Record List</h2>
+<table class="table" border="2">
+    <thead>
+      <tr>
+        <th>Sr. No.</th>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Mobile No.</th>
+        <th scope="col">Address</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Blood Group</th>
+        <th scope="col">Disease</th>
+        <th scope="col">Fees</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients; let i=index">
+        <td> {{i+1}} </td>
+        <th scope="row">{{patient.id}}</th>
+        <td>{{patient.name}}</td>
+        <td>{{patient.age}}</td>
+        <td>{{patient.mobileNo}}</td>
+        <td>{{patient.address}}</td>
+        <td>{{patient.gender}}</td>
+        <td>{{patient.bloodGroup}}</td>
+        <td>{{patient.disease}}</td>
+        <td>{{patient.fees}}</td>
+        <td>
+          <a type="button" class="btn btn-success" routerLink="/viewPatient/{{patient.id}}">View</a>&nbsp;
+          <a type="button" class="btn btn-secondary" routerLink="/updatePatient/{{patient.id}}">Update</a>&nbsp;
+          <button type="button" class="btn btn-danger" (click)="delete(patient.id)">Delete</button>&nbsp;
+  
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
+  

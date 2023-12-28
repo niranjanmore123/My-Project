@@ -1,0 +1,27 @@
+  
+<div class="container w-50">
+    <h2>Update Doctors Record</h2>
+  <form (ngSubmit)="update()">
+    <div class="mb-3">
+      <label for="name" class="form-label">Doctors name</label>
+      <input type="text" class="form-control" id="name" name="name" [(ngModel)]="doctor.name">
+  
+    </div>
+  
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="text" class="form-control" id="email" name="email" [(ngModel)]="doctor.email">
+    </div>
+  
+    <div class="mb-3">
+      <label for="specialization" class="form-label">Specialization</label>
+      <input type="text" class="form-control" id="specialization" name="specialization" [(ngModel)]="doctor.specialization">
+    </div>
+  
+    <div class="mb-3">
+      <label for="moblieNo" class="form-label">Mobile No.</label>
+      <input type="text" class="form-control" id="moblieNo" name="moblieNo" [(ngModel)]="doctor.moblieNo">
+    </div>
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
